@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="http://sg1-cdn.pgimgs.com/cssprod/propertyguru/layout.css?070815_16" type="text/css">
     <link rel="stylesheet" href="http://sg1-cdn.pgimgs.com/cssprod/propertyguru/homepage.css?070815_16" type="text/css">
-    <link rel="stylesheet" href="http://sg1-cdn.pgimgs.com/cssprod/propertyguru/bootstrap.min.css?070815_16" type="text/css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="http://sg1-cdn.pgimgs.com/cssprod/propertyguru/new_styles.css?070815_16" type="text/css">
     <link rel="stylesheet" href="http://sg1-cdn.pgimgs.com/cssprod/propertyguru/sg.css?070815_16" type="text/css"> 
+    <link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+    <link rel="stylesheet" type="text/css" href="fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
 
     <title>Property Guru</title>
@@ -161,54 +165,92 @@
             <div class="column_1">
                 <ul>
                     <li class="header_row_1 align_center header_row1_color1">
-                        <div class="pack-title"><span>House 1</span></div>
+                        <div class="pack-title"><span>375 Clementi Avenue 4</span></div>
                     </li>
                     <li class="header_row_2 align_center header_row2_color1">
-                        <div class="price"><span>$2900</span></div>
+                        <div class="price"><span>$2200</span></div>
                     </li>
+                    <li class="house_pic row_style_1"><span><a id="house1_pic" href="javascript:;"><i class="icon-zoom-in"></i>View gallery</a></span></li>
                     <li class="row_style_1 align_center">
                         <div id="rchart1" style="width:100%; height:70%"></div>
                     </li>
-                    <li class="row_style_1 row_1"><span><b>Aircon</b></span></li>
-                    <li class="row_style_1 row_2"><span><b>No.Bathrooms:</b> 2</span></li>
-                    <li class="row_style_1 row_1"><span><b>Features:</b> high floor, cable TV</span></li>
-                    <li class="row_style_1 row_2"><span><b>Area:</b> 710sqm</span></li>
-                    <li class="row_style_1 row_1"><span><b>No.Bedrooms:</b> 3</span></li>
-                    <li class="row_style_1 row_2"><span><b>List date:</b> 15/08/2015</span></li>
-                    <li class="row_style_1 row_1"><span><b>Lease:</b> 6 months</span></li>
-                    <li class="row_style_1 row_2"><span><b>NTUC, Giant, Cold Storage</b></span></li>
-                    <li class="row_style_1 row_1"><span><b>MRT:</b> Clementi, Buona Vista</span></li>
-                    <li class="row_style_1 row_2"><span><b>Bus stop:</b> Opp blk 109A, Houngang Ave 2</span></li>
-                    <li class="row_style_1 row_1"><span><b>Eatery:</b> 100m</span></li>
-                    <li class="row_style_1 row_2"><span><b>Bus service:</b> 151, 96, 95, A1, D1, BTC</span></li>
-                    <li class="row_style_footer_1 height"><a href="#" class="buy_now">Contact</a></li>
+                    <li class="row_style_1 row_1"><span><b>Bathroom(s):</b> 2</span></li>
+                    <li class="row_style_1 row_2"><span><b>Bedroom(s):</b> 2</span></li>
+                    <li class="row_style_1 row_1"><span><b>Feature(s):</b>TV, Aircon, Furniture, Washing machine, Fridge</span></li>
+                    <li class="row_style_1 row_2"><span><b>Floor Area:</b> 721 sqft</span></li>
+                    <li class="row_style_1 row_1"><span><b>List date:</b> 16/08/2015 (6 days ago)</span></li>
+                    <li class="row_style_1 row_2"><span><b>Lease Terms:</b> 2 years</span></li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt1supermarket" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Supermarket ( < 500m):</b> 2</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_2"><span><b>Nearest MRT:</b> Clementi [397m]</span></li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt1bustop1" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Bus stop (< 100m ):</b> 2</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_2">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt1bustop2" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Bus stop (100m - 200m):</b> 1</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_1"><span><b> Hawker center ( < 500m):</b> Nil</span></li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt1transaction" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Transactions this month:</b> 4</a>
+                        </span>
+                    </li>
+                    <li class="row_style_footer_1 height"><a href="#" class="btn btn-warning">Contact</a></li>
                 </ul>
             </div><!--end column-->
 
             <div class="column_1">
                 <ul>
                     <li class="header_row_1 align_center header_row1_color2">
-                        <div class="pack-title"><span>House 2</span></div>
+                        <div class="pack-title"><span>319 Clementi Avenue 4</span></div>
                     </li>
                     <li class="header_row_2 align_center header_row2_color2">
-                        <div class="price"><span>$2900</span></div>
+                        <div class="price"><span>$2250</span></div>
                     </li>
+                    <li class="house_pic row_style_1"><span><a id="house2_pic" href="javascript:;"><i class="icon-zoom-in"></i>View gallery</a></span></li>
                     <li class="row_style_1 align_center">
                         <div id="rchart2" style="width:100%; height:70%"></div>
                     </li>
-                    <li class="row_style_2 row_2"><span><b>Aircon</b></span></li>
-                    <li class="row_style_2 row_1"><span><b>No.Bathrooms:</b> 2</span></li>
-                    <li class="row_style_2 row_2"><span><b>Features:</b> high floor, cable TV</span></li>
-                    <li class="row_style_2 row_1"><span><b>Area:</b> 710sqm</span></li>
-                    <li class="row_style_2 row_2"><span><b>No.Bedrooms:</b> 3</span></li>
-                    <li class="row_style_2 row_1"><span><b>List date:</b> 15/08/2015</span></li>
-                    <li class="row_style_2 row_2"><span><b>Lease:</b> 6 months</span></li>
-                    <li class="row_style_2 row_1"><span><b>NTUC, Giant, Cold Storage</b></span></li>
-                    <li class="row_style_2 row_2"><span><b>MRT:</b> Clementi, Buona Vista</span></li>
-                    <li class="row_style_2 row_1"><span><b>Bus stop:</b> Opp blk 109A, Houngang Ave 2</span></li>
-                    <li class="row_style_2 row_2"><span><b>Eatery:</b> 100m</span></li>
-                    <li class="row_style_2 row_1"><span><b>Bus service:</b> 151, 96, 95, A1, D1, BTC</span></li>
-                    <li class="row_style_footer_1 height"><a href="#" class="buy_now">Contact</a></li>
+                    <li class="row_style_1 row_1"><span><b>Bathroom(s):</b> 2</span></li>
+                    <li class="row_style_1 row_2"><span><b>Bedroom(s):</b> 2</span></li>
+                    <li class="row_style_1 row_1"><span><b>Feature(s):</b>TV, Aircon, Furniture, Washing machine, Fridge, Stove</span></li>
+                    <li class="row_style_1 row_2"><span><b>Floor Area:</b> 721 sqft</span></li>
+                    <li class="row_style_1 row_1"><span><b>List date:</b> 17/08/2015 (5 days ago)</span></li>
+                    <li class="row_style_1 row_2"><span><b>Lease Terms:</b> 1 years</span></li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt2supermarket" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Supermarket ( < 500m):</b> 1</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_2"><span><b>Nearest MRT:</b> Clementi [225m]</span></li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt2bustop1" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Bus stop (< 100m ):</b> 2</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_2">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt2bustop2" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Bus stop (100m - 200m):</b> 2</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt2hawker" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Hawker center ( < 500m):</b> 1</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt2transaction" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Transactions this month:</b> 1</a>
+                        </span>
+                    </li>
+                    <li class="row_style_footer_1 height"><a href="#" class="btn btn-warning">Contact</a></li>
                 </ul>
             </div><!--end column-->
 
@@ -216,41 +258,294 @@
             <div class="column_1">
                 <ul>
                     <li class="header_row_1 align_center header_row1_color3">
-                        <div class="pack-title"><span>House 1</span></div>
+                        <div class="pack-title"><span>6 Holland Close</span></div>
                     </li>
                     <li class="header_row_2 align_center header_row2_color3">
-                        <div class="price"><span>$2900</span></div>
+                        <div class="price"><span>$2699</span></div>
                     </li>
+                    <li class="house_pic row_style_1"><span><a id="house3_pic" href="javascript:;"><i class="icon-zoom-in"></i>View gallery</a></span></li>
                     <li class="row_style_1 align_center">
                         <div id="rchart3" style="width:100%; height:70%"></div>
                     </li>
-                    <li class="row_style_1 row_1"><span><b>Aircon</b></span></li>
-                    <li class="row_style_1 row_2"><span><b>No.Bathrooms:</b> 2</span></li>
-                    <li class="row_style_1 row_1"><span><b>Features:</b> high floor, cable TV</span></li>
-                    <li class="row_style_1 row_2"><span><b>Area:</b> 710sqm</span></li>
-                    <li class="row_style_1 row_1"><span><b>No.Bedrooms:</b> 3</span></li>
-                    <li class="row_style_1 row_2"><span><b>List date:</b> 15/08/2015</span></li>
-                    <li class="row_style_1 row_1"><span><b>Lease:</b> 6 months</span></li>
-                    <li class="row_style_1 row_2"><span><b>NTUC, Giant, Cold Storage</b></span></li>
-                    <li class="row_style_1 row_1"><span><b>MRT:</b> Clementi, Buona Vista</span></li>
-                    <li class="row_style_1 row_2"><span><b>Bus stop:</b> Opp blk 109A, Houngang Ave 2</span></li>
-                    <li class="row_style_1 row_1"><span><b>Eatery:</b> 100m</span></li>
-                    <li class="row_style_1 row_2"><span><b>Bus service:</b> 151, 96, 95, A1, D1, BTC</span></li>
-                    <li class="row_style_footer_1 height"><a href="#" class="buy_now">Contact</a></li>
+                    <li class="row_style_1 row_1"><span><b>Bathroom(s):</b> 1</span></li>
+                    <li class="row_style_1 row_2"><span><b>Bedroom(s):</b> 2</span></li>
+                    <li class="row_style_1 row_1"><span><b>Feature(s):</b>TV, Aircon, Furniture, Washing machine, Fridge, Stove</span></li>
+                    <li class="row_style_1 row_2"><span><b>Floor Area:</b> 753 sqft</span></li>
+                    <li class="row_style_1 row_1"><span><b>List date:</b> 15/08/2015 (7 days ago)</span></li>
+                    <li class="row_style_1 row_2"><span><b>Lease Terms:</b> 1 years</span></li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt3supermarket" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Supermarket ( < 500m):</b> 2</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_2"><span><b>Nearest MRT:</b> Buona Vista [510m]</span></li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt3bustop1" data-trigger="hover"><b> Bus stop (< 100m ):</b> Nil</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_2">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt3bustop2" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Bus stop (100m - 200m):</b> 2</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt3hawker" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Hawker center ( < 500m):</b> 2</a>
+                        </span>
+                    </li>
+                    <li class="row_style_1 row_1">
+                        <span>
+                            <a data-toggle="popover" data-popover-content="#apt3transaction" data-trigger="hover"><i class="icon-info-sign"></i><b class="dotted"> Transactions this month:</b> 3</a>
+                        </span>
+                    </li>
+                    <li class="row_style_footer_1 height"><a href="#" class="btn btn-warning">Contact</a></li>
                 </ul>
             </div><!--end column-->
 
         </div><!--end price table-->
 
     </div>
+
+    <div id="apt1supermarket" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed">
+                <tr class="danger">
+                    <td><b>Giant</b></td>
+                    <td>250m</td>
+                </tr>
+                <tr class="active">
+                    <td><b>Fairprice</b></td>
+                    <td>457m</td>
+                </tr>
+            </table>  
+        </div>
+    </div>
+
+    <div id="apt1bustop1" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr class="danger">
+                    <td><b>Blk 376 - 57m</b></td>
+                </tr>
+                <tr class="active">
+                    <td>CT28, 284</td>
+                </tr>
+                <tr class="danger">
+                    <td><b>Bet Blks 315/318 - 79m</b></td>
+                </tr>
+                <tr class="active">
+                    <td>CT28, 284</td>
+                </tr>
+            </table>  
+        </div>
+    </div>  
+
+    <div id="apt1bustop2" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr class="danger">
+                    <td><b>Blk 335 - 185m</b></td>
+                </tr>
+                <tr class="active">
+                    <td>7, CT28, 282</td>
+                </tr>
+            </table>  
+        </div>
+    </div> 
+
+    <div id="apt2supermarket" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed">
+                <tr class="danger">
+                    <td><b>Giant</b></td>
+                    <td>450m</td>
+                </tr>
+            </table>  
+        </div>
+    </div>
+
+    <div id="apt2bustop1" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr class="danger">
+                    <td><b>Blk 317 - 75m</b></td>
+                </tr>
+                <tr class="active">
+                    <td>52, 99, 105, 106, 154, 173, 183, 185, 189, 196, 201</td>
+                </tr>
+                <tr class="danger">
+                    <td><b>Opp Blk 317 - 92m</b></td>
+                </tr>
+                <tr class="active">
+                    <td>52, 99, 105, 106, 154, 173, 183, 185, 189, 196, 201, 5N, NR5, NR8</td>
+                </tr>
+            </table>  
+        </div>
+    </div>  
+
+    <div id="apt2bustop2" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr class="danger">
+                    <td><b>Bet Blks 315/318 - 144m</b></td>
+                </tr>
+                <tr class="active">
+                    <td>CT28, 284</td>
+                </tr>
+                <tr class="danger">
+                    <td><b>Blk 376 - 167m</b></td>
+                </tr>
+                <tr class="active">
+                    <td>CT28, 284</td>
+                </tr>
+            </table>  
+        </div>
+    </div>  
+
+    <div id="apt2hawker" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr class="danger">
+                    <td><b>Blk 448 Clementi Avenue 3</b></td>
+                </tr>
+                <tr class="active">
+                    <td>490m</td>
+                </tr>
+            </table>  
+        </div>
+    </div>   
     
+    <div id="apt3supermarket" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed">
+                <tr class="danger">
+                    <td><b>Cold Storage</b></td>
+                    <td>335m</td>
+                </tr>
+                <tr class="active">
+                    <td><b>Fair Price</b></td>
+                    <td>392m</td>
+                </tr>
+            </table>  
+        </div>
+    </div> 
+
+    <div id="apt3bustop2" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr class="danger">
+                    <td><b>Blk 9 - 139m</b></td>
+                </tr>
+                <tr class="active">
+                    <td>61, 106, 970, NR8</td>
+                </tr>
+                <tr class="danger">
+                    <td><b>Blk 8 - 164m</b></td>
+                </tr>
+                <tr class="active">
+                    <td>32, 100, 105, 111, 145, 147, 156, 158, 970</td>
+                </tr>
+            </table>  
+        </div>
+    </div>  
+
+    <div id="apt3hawker" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr class="danger">
+                    <td><b>Blk 44 Holland Drive</b></td>
+                </tr>
+                <tr class="active">
+                    <td>319m</td>
+                </tr>
+                <tr class="danger">
+                    <td><b>Holland Village Market Food Centre</b></td>
+                </tr>
+                <tr class="active">
+                    <td>448m</td>
+                </tr>
+            </table>  
+        </div>
+    </div>
+
+    <div id="apt1transaction" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr>
+                    <th><b>Flat type</b></th>
+                    <th><b>Rent</b></th>
+                </tr>
+                <tr class="danger">
+                    <td>3RM</td>
+                    <td>1950</td>
+                </tr>
+                <tr class="active">
+                    <td>3RM</td>
+                    <td>2000</td>
+                </tr>
+                <tr class="danger">
+                    <td>4RM</td>
+                    <td>1000</td>
+                </tr>
+                <tr class="active">
+                    <td>4RM</td>
+                    <td>1500</td>
+                </tr>
+            </table>  
+        </div>
+    </div>
+
+    <div id="apt2transaction" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr>
+                    <th><b>Flat type</b></th>
+                    <th><b>Rent</b></th>
+                </tr>
+                <tr class="danger">
+                    <td>4RM</td>
+                    <td>2200</td>
+                </tr>
+            </table>  
+        </div>
+    </div>   
+
+    <div id="apt3transaction" class="hidden">
+        <div class="popover-body">
+            <table class="table table-condensed" style="width:150px;">
+                <tr>
+                    <th><b>Flat type</b></th>
+                    <th><b>Rent</b></th>
+                </tr>
+                <tr class="danger">
+                    <td>3RM</td>
+                    <td>2250</td>
+                </tr>
+                <tr class="active">
+                    <td>3RM</td>
+                    <td>2550</td>
+                </tr>
+                <tr class="danger">
+                    <td>4RM</td>
+                    <td>2900</td>
+                </tr>
+            </table>  
+        </div>
+    </div>      
 </body>
 
 <script type="text/javascript" src="http://sg1-cdn.pgimgs.com/jsprod/lib/modernizr.js?070815_16"></script>
-<script type="text/javascript" src="http://sg1-cdn.pgimgs.com/jsprod/jquery.js?070815_16"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/highcharts-more.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.pack.js?v=3.1.3"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script type="text/javascript">
@@ -394,6 +689,90 @@
                 pointPlacement: 'on'
             }]
 
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#house1_pic").click(function() {
+            $.fancybox.open([
+                {
+                    href : 'images/houses/flat1a.png',
+                    title : '375 Clementi Avenue 4'
+                }, {
+                    href : 'images/houses/flat1b.png',
+                    title : '375 Clementi Avenue 4'
+                }, {
+                    href : 'images/houses/flat1c.png',
+                    title : '375 Clementi Avenue 4'
+                }
+            ], {
+                helpers : {
+                    thumbs : {
+                        width: 75,
+                        height: 50
+                    }
+                }
+            });
+        });
+
+        $("#house2_pic").click(function() {
+            $.fancybox.open([
+                {
+                    href : 'images/houses/flat2a.png',
+                    title : '319 Clementi Avenue 4'
+                }, {
+                    href : 'images/houses/flat2b.png',
+                    title : '319 Clementi Avenue 4'
+                }, {
+                    href : 'images/houses/flat2c.png',
+                    title : '319 Clementi Avenue 4'
+                }
+            ], {
+                helpers : {
+                    thumbs : {
+                        width: 75,
+                        height: 50
+                    }
+                }
+            });
+        });
+
+        $("#house3_pic").click(function() {
+            $.fancybox.open([
+                {
+                    href : 'images/houses/flat3a.png',
+                    title : '6 Holland Close'
+                }, {
+                    href : 'images/houses/flat3b.png',
+                    title : '6 Holland Close'
+                }, {
+                    href : 'images/houses/flat3c.png',
+                    title : '6 Holland Close'
+                }
+            ], {
+                helpers : {
+                    thumbs : {
+                        width: 75,
+                        height: 50
+                    }
+                }
+            });
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function(){
+        $("[data-toggle=popover]").popover({
+            html : true,
+            content: function() {
+              var content = $(this).attr("data-popover-content");
+              return $(content).children(".popover-body").html();
+            },
+            // title: function() {
+            //   var title = $(this).attr("data-popover-content");
+            //   return $(title).children(".popover-heading").html();
+            // }
         });
     });
 </script>

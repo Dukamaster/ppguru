@@ -1,3 +1,7 @@
+li span a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
 .page-header .logo {
     width: 290px;
     height: 61px;
@@ -113,17 +117,6 @@
     -ms-transition-delay: 0s;
     transition-delay: 0s;
 }
-
-.price_table .column_1:hover .header_row_1, 
-.price_table .column_1:hover .header_row_2,
-.price_table .column_1:hover .row_style_1,
-.price_table .column_1:hover .row_style_2,
-.price_table .column_1:hover .row_style_footer_1,
-.price_table .column_1:hover .row_style_footer_2
-{   padding-left: 5px;
-    padding-right: 5px;
-}
-
     
 /**** DATA ROWS  ****/
 .price_table .row_style_1,
@@ -132,15 +125,14 @@
 .price_table .row_style_footer_2 {
     width: 100%;
     /*height: 40px;*/
-    padding-top: 9px;
     float: left;
 }
-
+/*
 .price_table .height {
     height: 40px;
-}
+}*/
 
-.price_table .row_style_footer_1, .price_table .row_style_footer_2 {padding: 10px 0px;}
+.price_table .row_style_footer_1, .price_table .row_style_footer_2 {padding: 10px 0px; text-align: center;}
     
 .price_table .row_style_1, .price_table .row_style_footer_1 {background-color: #fff;}
 .price_table .row_style_2, .price_table .row_style_footer_2 {background-color: #F0EED9;}
@@ -151,51 +143,35 @@
 .price_table .row_style_1 span, .price_table .row_style_2 span { 
     position: relative;
     font-size: 14px;
-    padding: 4px;
+    padding: 15px;
     margin-left: 30px;
     display: inline-block;
+    line-height: 1.5em;
 }
 
 .price_table .pack-title span:before {
     background: url("../images/Home-icon.png") no-repeat 0 0;
     width: 24px;
     height: 24px;
-    left: -30px;
+    left: 1%;
     position: absolute;
-    margin-left: 120px;
     content: "";
 }
 
-/**** BUY NOW BUTTON ****/
-.buy_now {
-    width: 60px;
-    height: 20px;
-    padding: 5px 16px;
-    display: block;
+.price_table .house_pic {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: bold;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-    border-style: solid;
-    border-width: 1px;
-    color: #513b26;
-    border-color: #ddb385 #dca36c #db904f;
-    background: #fab778;
-    background: -webkit-gradient(linear, left top, left bottom, from(#fcca94), to(#f9a55c));
-    background: -moz-linear-gradient(top, #fcca94,  #f9a55c);
-    background: linear-gradient(#fcca94, #f9a55c);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
+    padding-top: 9px;
 }
-.buy_now:hover {
-    border-color: #d2aa7e #d19c68 #d0894b;
-    background: #fbca98;
-    background: -webkit-gradient(linear, left top, left bottom, from(#fddfba), to(#fab371));
-    background: -moz-linear-gradient(top, #fddfba,  #fab371);
-    background: linear-gradient(#fddfba, #fab371);
+
+.price_table .house_pic span {
+    position: relative;
+    font-size: 14px;
+    padding: 4px;
+    display: inline-block;
+    margin-left: 0
+}
+
+.dotted{
+  border-bottom: 1px dashed #999;
+  text-decoration: none; 
 }
