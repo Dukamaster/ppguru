@@ -54,7 +54,7 @@
 }
 
 .rating-disabled {
-    cursor: not-allowed;
+    /*cursor: not-allowed;*/
 }
 
 .rating-uni {
