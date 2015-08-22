@@ -175,3 +175,7 @@ li span a:hover {
   border-bottom: 1px dashed #999;
   text-decoration: none; 
 }
+
+.star-rating:hover {
+    cursor: pointer;
+}
